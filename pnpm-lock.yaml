@@ -13,6 +13,7 @@ specifiers:
   prettier: 2.3.2
   pretty-quick: 3.1.1
   ts-node: 10.1.0
+  tslib: 2.3.0
   typescript: 4.3.5
 
 devDependencies:
@@ -28,6 +29,7 @@ devDependencies:
   prettier: registry.nlark.com/prettier/2.3.2
   pretty-quick: registry.nlark.com/pretty-quick/3.1.1_prettier@2.3.2
   ts-node: registry.nlark.com/ts-node/10.1.0_typescript@4.3.5
+  tslib: registry.nlark.com/tslib/2.3.0
   typescript: registry.nlark.com/typescript/4.3.5
 
 packages:
@@ -1086,6 +1088,11 @@ packages:
     name: debug
     version: 4.3.2
     engines: { node: ">=6.0" }
+    peerDependencies:
+      supports-color: "*"
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: registry.nlark.com/ms/2.1.2
     dev: true
@@ -1870,6 +1877,8 @@ packages:
       please-upgrade-node: registry.nlark.com/please-upgrade-node/3.2.0
       string-argv: 0.3.1
       stringify-object: registry.nlark.com/stringify-object/3.3.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/listr2/3.11.0_enquirer@2.3.6:
@@ -3074,6 +3083,11 @@ packages:
       "@swc/wasm": ">=1.2.50"
       "@types/node": "*"
       typescript: ">=2.7"
+    peerDependenciesMeta:
+      "@swc/core":
+        optional: true
+      "@swc/wasm":
+        optional: true
     dependencies:
       "@tsconfig/node10": registry.nlark.com/@tsconfig/node10/1.0.8
       "@tsconfig/node12": registry.nlark.com/@tsconfig/node12/1.0.9
@@ -3097,6 +3111,17 @@ packages:
       }
     name: tslib
     version: 1.14.1
+    dev: true
+
+  registry.nlark.com/tslib/2.3.0:
+    resolution:
+      {
+        integrity: sha1-gDuM2rPhK6WBpMpByIObuw2ssJ4=,
+        registry: https://registry.npm.taobao.org/,
+        tarball: https://registry.nlark.com/tslib/download/tslib-2.3.0.tgz,
+      }
+    name: tslib
+    version: 2.3.0
     dev: true
 
   registry.nlark.com/type-fest/0.18.1:
