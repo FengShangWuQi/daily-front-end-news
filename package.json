@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "test": "tsc",
     "format": "prettier --write .'",
-    "start": "ts-node daily.ts"
+    "daily": "ts-node scripts/daily.ts"
   },
   "commitlint": {
     "extends": [
